@@ -460,8 +460,25 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
 
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container">
       <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+
+      <div class="content has-text-justified mt-6 mb-5">
+        <p>
+          To quantitatively evaluate the effectiveness of our framework, we conducted <strong>comprehensive comparative experiments</strong> against several state-of-the-art (SOTA) methods. 
+          As summarized in <strong>Table 1</strong>, our approach was benchmarked using <strong>Spearman's Rank Correlation</strong> and <strong>Mean Absolute Error (MAE)</strong> across various surgical tasks. 
+          The results highlight that by integrating fine-grained instrument-tissue modeling, our model significantly outperforms vision-only baselines, particularly in complex clinical scenarios where subtle interactions are critical for skill assessment.
+        </p>
+      </div>
+
+      <div class="box" style="background-color: #ffffff; border: 1px solid #efefef;">
+        <figure class="image">
+          <img src="static/images/table.jpg" alt="Experimental Results Table" style="max-width: 100%; height: auto; margin: 0 auto;">
+          <p class="is-size-6 mt-3 has-text-grey">
+            <em>Table 1: Quantitative comparison across different surgical tasks.</em>
+          </p>
+        </figure>
+      </div>
 
       <div id="results-carousel" class="carousel results-carousel">
         
@@ -542,16 +559,8 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
         </div>
 
       </div>
-      <div class="column is-centered has-text-centered mt-6">
-        <div class="box" style="background-color: #ffffff; border: 1px solid #efefef;">
-          <figure class="image">
-            <img src="static/images/table.jpg" alt="Experimental Results Table" style="max-width: 100%; height: auto; margin: 0 auto;">
-            <p class="is-size-6 mt-3 has-text-grey">
-              <em>Table 1: Quantitative comparison across different surgical tasks.</em>
-            </p>
-          </figure>
-        </div>
-      </div>
+
+    
 
       <div class="notification is-info is-light mt-5 has-text-centered">
         Consistent across all three datasets, our <strong>Joint Instrument-Tissue Modeling</strong> demonstrates a significant performance gain over vision-only baselines.
