@@ -120,6 +120,9 @@ body {
     color: var(--text-primary) !important;
     margin-bottom: 2rem !important;
     line-height: 1.2 !important;
+  text-align: center !important;   /* 强制文字居中 */
+    margin-left: auto !important;    /* 自动左右边距实现块居中 */
+    margin-right: auto !important;
    max-width: 90% !important;
   width: 90% !important;           /* 强制占用 100% 宽度 */
     display: block !important;
