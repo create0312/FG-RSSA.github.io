@@ -460,119 +460,106 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
 
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Experiments</h2>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Experimental Results</h2>
 
-      <div class="content has-text-justified">
-        <p>
-          We evaluated our proposed framework on three diverse surgical datasets: the public <strong>JIGSAWS</strong>, <strong>Heichole</strong>, and our <strong>Private Hernia Suture</strong> dataset. 
-          Our experiments focus on the model's ability to assess surgical skills by effectively modeling the spatial relationships and temporal dynamics between instruments and tissues.
-        </p>
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+          <div class="box m-2" style="min-height: 600px; display: flex; flex-direction: column;">
+            <h3 class="title is-4" style="border-left: 5px solid #3273dc; padding-left: 15px;">
+              JIGSAWS Dataset <span class="tag is-info is-light">Public Benchmark</span>
+            </h3>
+            <div class="content has-text-justified">
+              <p>
+                We evaluated our framework on the public <strong>JIGSAWS</strong> dataset. Our experiments focus on the model's ability to assess surgical skills by effectively modeling spatial relationships and temporal dynamics. 
+                Our method achieves a <strong>significant improvement</strong> in correlation metrics.
+              </p>
+            </div>
+            <div class="columns is-centered is-vcentered" style="flex-grow: 1;">
+              <div class="column is-6">
+                <figure class="image">
+                  <img src="static/images/result1.png" alt="JIGSAWS 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                  <p class="is-size-7 mt-2 has-text-grey has-text-centered">Fine-grained attention</p>
+                </figure>
+              </div>
+              <div class="column is-6">
+                <figure class="image">
+                  <img src="static/images/result2.png" alt="JIGSAWS 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                  <p class="is-size-7 mt-2 has-text-grey has-text-centered">Discrimination heatmap</p>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="box m-2" style="min-height: 600px; display: flex; flex-direction: column;">
+            <h3 class="title is-4" style="border-left: 5px solid #48c774; padding-left: 15px;">
+              Heichole Dataset <span class="tag is-success is-light">Simulated Surgery</span>
+            </h3>
+            <div class="content has-text-justified">
+              <p>
+                On the <strong>Heichole</strong> dataset (48 laparoscopic videos), our model accurately captures tool-tissue interactions during complex maneuvers. The visualization below shows the attention distribution across different surgical phases.
+              </p>
+            </div>
+            <div class="columns is-centered is-vcentered" style="flex-grow: 1;">
+              <div class="column is-6">
+                <figure class="image">
+                  <img src="static/images/heichole_res1.png" alt="Heichole 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                  <p class="is-size-7 mt-2 has-text-grey has-text-centered">Spatio-temporal attention</p>
+                </figure>
+              </div>
+              <div class="column is-6">
+                <figure class="image">
+                  <img src="static/images/heichole_res2.png" alt="Heichole 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                  <p class="is-size-7 mt-2 has-text-grey has-text-centered">Score distribution</p>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="box m-2" style="min-height: 600px; display: flex; flex-direction: column;">
+            <h3 class="title is-4" style="border-left: 5px solid #ff3860; padding-left: 15px;">
+              Private Hernia Dataset <span class="tag is-danger is-light">Clinical Application</span>
+            </h3>
+            <div class="content has-text-justified">
+              <p>
+                The <strong>Private Hernia Suture</strong> dataset represents a challenging clinical scenario. Our framework maintains robust performance even with significant occlusion and varying lighting conditions.
+              </p>
+            </div>
+            <div class="columns is-centered is-vcentered" style="flex-grow: 1;">
+              <div class="column is-10">
+                <figure class="image">
+                  <img src="static/images/private_result.png" alt="Private Result" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%;">
+                  <p class="is-size-7 mt-2 has-text-grey has-text-centered">Robust instrument tracking in clinical environment</p>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <div class="column is-centered has-text-centered">
+      <div class="column is-centered has-text-centered mt-6">
         <div class="box" style="background-color: #ffffff; border: 1px solid #efefef;">
           <figure class="image">
-            <img src="static/images/table.jpg" alt="Experimental Results Table" style="max-width: 100%; height: auto;">
+            <img src="static/images/table.jpg" alt="Experimental Results Table" style="max-width: 100%; height: auto; margin: 0 auto;">
             <p class="is-size-6 mt-3 has-text-grey">
-              <em>Table 1: Performance comparison with state-of-the-art methods across different surgical tasks using Spearman's rank correlation and MAE metrics.</em>
+              <em>Table 1: Quantitative comparison across different surgical tasks.</em>
             </p>
           </figure>
         </div>
       </div>
 
-      <div class="content has-text-justified mt-6">
-        <p>
-          To further validate the effectiveness of our <strong>Fine-Grained Contrastive Learning</strong>, we visualize the attention maps and prediction results. 
-          The model demonstrates a superior capability in capturing critical surgical maneuvers and subtle instrument-tissue interactions compared to baseline methods.
-        </p>
-      </div>
-
-      <div class="columns is-centered mt-5">
-        <div class="column is-6">
-          <div class="box is-shadowless" style="background: transparent; border: none;">
-            <figure class="image">
-              <img src="static/images/result1.png" alt="Visualization 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Fine-grained attention on suturing tasks</p>
-            </figure>
-          </div>
-        </div>
-
-        <div class="column is-6">
-          <div class="box is-shadowless" style="background: transparent; border: none;">
-            <figure class="image">
-              <img src="static/images/result2.png" alt="Visualization 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Skill level discrimination heatmap</p>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="content has-text-centered mt-5">
-        <p class="is-size-6 has-text-grey">
-          Our method achieves a <strong>15% improvement</strong> in correlation metrics on the clinical dataset, highlighting the advantage of joint modeling.
-        </p>
-      </div>
-
-
-
-      <hr style="background-color: rgba(0,0,0,0.05); margin: 3rem 0;">
-
-      <h3 class="title is-4 has-text-centered">Results on Heichole Dataset</h3>
-      <div class="content has-text-justified">
-        <p>
-          On the <strong>Heichole</strong> dataset, which contains 48 laparoscopic surgical videos, our model accurately captures tool-tissue interactions during complex maneuvers. The visualization below shows the attention distribution across different surgical phases.
-        </p>
-      </div>
-
-      <div class="columns is-centered mt-5">
-        <div class="column is-6">
-          <div class="box is-shadowless" style="background: transparent; border: none;">
-            <figure class="image">
-              <img src="static/images/heichole_res1.png" alt="Heichole Result 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Spatio-temporal attention on gallbladder clipping</p>
-            </figure>
-          </div>
-        </div>
-        <div class="column is-6">
-          <div class="box is-shadowless" style="background: transparent; border: none;">
-            <figure class="image">
-              <img src="static/images/heichole_res2.png" alt="Heichole Result 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Phase-wise skill score distribution</p>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-6">
-        <h3 class="title is-4 has-text-centered">Results on Private Hernia Suture Dataset</h3>
-        <div class="content has-text-justified">
-          <p>
-            The <strong>Private Hernia Suture</strong> dataset represents a challenging clinical scenario. Our framework maintains robust performance even with significant occlusion and varying lighting conditions, as demonstrated in the tracking and assessment result below.
-          </p>
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column is-10"> <div class="box" style="padding: 1rem; background-color: #f9f9f9;">
-              <figure class="image">
-                <img src="static/images/private_result.png" alt="Private Dataset Result" style="border-radius: 4px; width: 100%;">
-                <p class="is-size-7 mt-3 has-text-grey has-text-centered">
-                  Figure 2: Robust instrument tracking and skill regression on clinical hernia suture videos.
-                </p>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="notification is-info is-light mt-6 has-text-centered">
+      <div class="notification is-info is-light mt-5 has-text-centered">
         Consistent across all three datasets, our <strong>Joint Instrument-Tissue Modeling</strong> demonstrates a significant performance gain over vision-only baselines.
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- Video carousel -->
 <section class="hero is-small">
