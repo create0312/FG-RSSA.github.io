@@ -353,6 +353,39 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
 <!-- End youtube video -->
 
 
+<!-- SAM2 Dataset -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Dataset Generation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+  <p>
+    Our dataset construction follows a semi-automated pipeline leveraging <strong>SAM 2</strong>'s spatiotemporal tracking capabilities. 
+    As shown in the workflow below, we initialize the process with interactive prompts (positive/negative points) on the first frame. 
+    The <strong>Memory Attention</strong> module then propagates these masks across the video sequence, utilizing a FIFO memory bank to maintain temporal consistency.
+  </p>
+  
+  <p>
+    To ensure clinical-grade precision, we performed a <strong>rigorous manual quality inspection</strong>. 
+    Frames with suboptimal segmentation were meticulously refined by human experts, transforming raw model outputs into high-fidelity ground truth. 
+    This process resulted in a comprehensive dataset of <strong>169,139 high-quality mask annotations</strong>, providing a robust foundation for automated surgical skill assessment.
+  </p>
+</div>
+          
+          <div class="publication-video">
+            <!-- TODO: Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
