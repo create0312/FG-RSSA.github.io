@@ -514,6 +514,61 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
         </p>
       </div>
 
+
+
+      <hr style="background-color: rgba(0,0,0,0.05); margin: 3rem 0;">
+
+      <h3 class="title is-4 has-text-centered">Results on Heichole Dataset</h3>
+      <div class="content has-text-justified">
+        <p>
+          On the <strong>Heichole</strong> dataset, which contains 48 laparoscopic surgical videos, our model accurately captures tool-tissue interactions during complex maneuvers. The visualization below shows the attention distribution across different surgical phases.
+        </p>
+      </div>
+
+      <div class="columns is-centered mt-5">
+        <div class="column is-6">
+          <div class="box is-shadowless" style="background: transparent; border: none;">
+            <figure class="image">
+              <img src="static/images/heichole_res1.png" alt="Heichole Result 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Spatio-temporal attention on gallbladder clipping</p>
+            </figure>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box is-shadowless" style="background: transparent; border: none;">
+            <figure class="image">
+              <img src="static/images/heichole_res2.png" alt="Heichole Result 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Phase-wise skill score distribution</p>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="title is-4 has-text-centered">Results on Private Hernia Suture Dataset</h3>
+        <div class="content has-text-justified">
+          <p>
+            The <strong>Private Hernia Suture</strong> dataset represents a challenging clinical scenario. Our framework maintains robust performance even with significant occlusion and varying lighting conditions, as demonstrated in the tracking and assessment result below.
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-10"> <div class="box" style="padding: 1rem; background-color: #f9f9f9;">
+              <figure class="image">
+                <img src="static/images/private_result.png" alt="Private Dataset Result" style="border-radius: 4px; width: 100%;">
+                <p class="is-size-7 mt-3 has-text-grey has-text-centered">
+                  Figure 2: Robust instrument tracking and skill regression on clinical hernia suture videos.
+                </p>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="notification is-info is-light mt-6 has-text-centered">
+        Consistent across all three datasets, our <strong>Joint Instrument-Tissue Modeling</strong> demonstrates a significant performance gain over vision-only baselines.
+      </div>
+
     </div>
   </div>
 </section>
