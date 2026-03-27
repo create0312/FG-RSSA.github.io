@@ -121,6 +121,8 @@ body {
     margin-bottom: 2rem !important;
     line-height: 1.2 !important;
    max-width: 90% !important;
+  width: 90% !important;           /* 强制占用 100% 宽度 */
+    display: block !important;
 }
 
 .publication-banner {
