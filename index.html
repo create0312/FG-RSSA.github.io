@@ -276,7 +276,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
@@ -297,7 +297,7 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Dataset Generation</h2>
+      <h2 class="title is-3 has-text-centered">Dataset Generation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
@@ -392,7 +392,7 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Methodology</h2>
+      <h2 class="title is-3 has-text-centered">Methodology</h2>
       
       <div class="content has-text-justified">
         <p>
@@ -501,83 +501,98 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
       <div id="results-carousel" class="carousel results-carousel">
   
   <div class="item">
-    <div class="box m-2" style="min-height: 600px; display: flex; flex-direction: column; justify-content: center;">
-      <h3 class="title is-4" style="border-left: 5px solid #3273dc; padding-left: 15px;">
+    <div class="box m-2" style="height: 600px; display: flex; flex-direction: column;">
+      <h3 class="title is-4" style="border-left: 5px solid #3273dc; padding-left: 15px; margin-bottom: 1.5rem;">
         JIGSAWS Dataset <span class="tag is-info is-light">Public Benchmark</span>
       </h3>
-      <div class="content has-text-justified">
-        <p>
-          We evaluated our framework on the public <strong>JIGSAWS</strong> dataset. Our experiments focus on the model's ability to assess surgical skills by effectively modeling spatial relationships and temporal dynamics. 
-          Our method achieves a <strong>significant improvement</strong> in correlation metrics.
-        </p>
-      </div>
-      <div class="columns is-centered is-vcentered">
-        <div class="column is-6">
-          <figure class="image">
-            <img src="static/images/result1.png" alt="JIGSAWS 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <p class="is-size-7 mt-2 has-text-grey has-text-centered">Fine-grained attention</p>
-          </figure>
+      
+      <div style="margin: auto 0;">
+        <div class="content has-text-justified mb-5">
+          <p>
+            We evaluated our framework on the public <strong>JIGSAWS</strong> dataset. Our experiments focus on the model's ability to assess surgical skills by effectively modeling spatial relationships and temporal dynamics.
+          </p>
         </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="static/images/result2.png" alt="JIGSAWS 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <p class="is-size-7 mt-2 has-text-grey has-text-centered">Discrimination heatmap</p>
-          </figure>
-        </div>
+        <div class="columns is-centered is-mobile is-vcentered" style="display: flex; align-items: stretch;">
+  <div class="column is-6" style="display: flex; flex-direction: column; justify-content: center;">
+    <figure class="image" style="width: 100%;">
+      <img src="static/images/result1.png" alt="JIGSAWS 1" 
+           style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-height: 280px; width: auto; margin: 0 auto; display: block;">
+      <p class="is-size-7 mt-2 has-text-grey has-text-centered">Fine-grained attention</p>
+    </figure>
+  </div>
+
+  <div class="column is-6" style="display: flex; flex-direction: column; justify-content: center;">
+    <figure class="image" style="width: 100%;">
+      <img src="static/images/result2.png" alt="JIGSAWS 2" 
+           style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-height: 280px; width: auto; margin: 0 auto; display: block;">
+      <p class="is-size-7 mt-2 has-text-grey has-text-centered">Discrimination heatmap</p>
+    </figure>
+  </div>
+</div>
       </div>
     </div>
   </div>
 
   <div class="item">
-    <div class="box m-2" style="min-height: 600px; display: flex; flex-direction: column; justify-content: center;">
-      <h3 class="title is-4" style="border-left: 5px solid #48c774; padding-left: 15px;">
+    <div class="box m-2" style="height: 600px; display: flex; flex-direction: column;">
+      <h3 class="title is-4" style="border-left: 5px solid #48c774; padding-left: 15px; margin-bottom: 1.5rem;">
         Heichole Dataset <span class="tag is-success is-light">Simulated Surgery</span>
       </h3>
-      <div class="content has-text-justified">
-        <p>
-          On the <strong>Heichole</strong> dataset (48 laparoscopic videos), our model accurately captures tool-tissue interactions during complex maneuvers. The visualization below shows the attention distribution across different surgical phases.
-        </p>
-      </div>
-      <div class="columns is-centered is-vcentered">
-        <div class="column is-6">
-          <figure class="image">
-            <img src="static/images/table2.jpg" alt="Heichole 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <p class="is-size-7 mt-2 has-text-grey has-text-centered">Spatio-temporal attention</p>
-          </figure>
+      
+      <div style="margin: auto 0;">
+        <div class="content has-text-justified mb-5">
+          <p>
+            On the <strong>Heichole</strong> dataset (48 laparoscopic videos), our model accurately captures tool-tissue interactions during complex maneuvers.
+          </p>
         </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="static/images/result3.png" alt="Heichole 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <p class="is-size-7 mt-2 has-text-grey has-text-centered">Score distribution</p>
-          </figure>
-        </div>
+        <div class="columns is-centered is-mobile is-vcentered" style="display: flex; align-items: stretch;">
+  
+  <div class="column is-6" style="display: flex; flex-direction: column; justify-content: center;">
+    <figure class="image" style="width: 100%;">
+      <img src="static/images/table2.jpg" alt="Heichole 1" 
+           style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-height: 280px; width: auto; margin: 0 auto; display: block;">
+      <p class="is-size-7 mt-2 has-text-grey has-text-centered">Spatio-temporal attention</p>
+    </figure>
+  </div>
+
+  <div class="column is-6" style="display: flex; flex-direction: column; justify-content: center;">
+    <figure class="image" style="width: 100%;">
+      <img src="static/images/result3.png" alt="Heichole 2" 
+           style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-height: 280px; width: auto; margin: 0 auto; display: block;">
+      <p class="is-size-7 mt-2 has-text-grey has-text-centered">Score distribution</p>
+    </figure>
+  </div>
+
+</div>
       </div>
     </div>
   </div>
 
   <div class="item">
-    <div class="box m-2" style="min-height: 600px; display: flex; flex-direction: column; justify-content: center;">
-      <h3 class="title is-4" style="border-left: 5px solid #ff3860; padding-left: 15px;">
+    <div class="box m-2" style="height: 600px; display: flex; flex-direction: column;">
+      <h3 class="title is-4" style="border-left: 5px solid #ff3860; padding-left: 15px; margin-bottom: 1.5rem;">
         Private Hernia Dataset <span class="tag is-danger is-light">Clinical Application</span>
       </h3>
-      <div class="content has-text-justified">
-        <p>
-          The <strong>Private Hernia Suture</strong> dataset represents a challenging clinical scenario. Our framework maintains robust performance even with significant occlusion and varying lighting conditions.
-        </p>
-      </div>
-      <div class="columns is-centered is-vcentered">
-        <div class="column is-10">
-          <figure class="image">
-            <img src="static/images/result4.png" alt="Private Result" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: auto; max-height: 350px; margin: 0 auto;">
-            <p class="is-size-7 mt-2 has-text-grey has-text-centered">Robust instrument tracking in clinical environment</p>
-          </figure>
+      
+      <div style="margin: auto 0;">
+        <div class="content has-text-justified mb-5">
+          <p>
+            The <strong>Private Hernia Suture</strong> dataset represents a challenging clinical scenario. Our framework maintains robust performance even with significant occlusion.
+          </p>
+        </div>
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-10">
+            <figure class="image">
+              <img src="static/images/result4.png" alt="Private Result" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: auto; max-height: 300px; margin: 0 auto;">
+              <p class="is-size-7 mt-2 has-text-grey has-text-centered">Robust instrument tracking</p>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
 </div>
-
     
 
       <div class="notification is-info is-light mt-5 has-text-centered">
