@@ -119,7 +119,8 @@ body {
     font-weight: 800 !important;
     color: var(--text-primary) !important;
     margin-bottom: 2rem !important;
-    line-height: 1.4 !important;
+    line-height: 1.2 !important;
+   max-width: 70% !important;
 }
 
 .publication-banner {
