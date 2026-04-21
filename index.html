@@ -687,125 +687,97 @@ In robot-assisted surgery, precise and objective surgical skill assessment is es
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+      <h2 class="title is-3">Video Presentation</h2>
 
-      <div class="content has-text-centered mb-5">
-        <p>
-          We present qualitative video demonstrations of our model from multiple perspectives, 
-          including instrument-centered CAM, tissue-centered CAM, and other complementary visualizations.
-        </p>
-      </div>
+      <div id="video-carousel" class="carousel results-carousel">
 
-      <!-- 独立的 carousel，不要和前面的 results-carousel 共用同一个 id -->
-      <div id="video-presentation-carousel" class="carousel">
-        
         <!-- Page 1 -->
         <div class="item">
-          <div class="box m-2" style="padding: 1.5rem;">
-            <div class="columns is-multiline is-variable is-4">
+          <div class="columns is-multiline is-centered">
 
-              <!-- 第一排左：instrument CAM -->
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/PV-instru1.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Instrument CAM Visualization</strong>
-                  </p>
-                </div>
-              </div>
-
-              <!-- 第一排右：tissue CAM -->
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/PV-tissue1.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Tissue CAM Visualization</strong>
-                  </p>
-                </div>
-              </div>
-
-              <!-- 第二排左：你可以替换成别的视频 -->
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/video3.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Additional Visualization 1</strong>
-                  </p>
-                </div>
-              </div>
-
-              <!-- 第二排右：你可以替换成别的视频 -->
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/video4.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Additional Visualization 2</strong>
-                  </p>
-                </div>
-              </div>
-
+            <!-- 第一排左：instrument -->
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/PV-instru1.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Instrument CAM Visualization
+              </h2>
             </div>
+
+            <!-- 第一排右：tissue -->
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/PV-tissue1.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Tissue CAM Visualization
+              </h2>
+            </div>
+
+            <!-- 第二排左 -->
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/video3.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Additional Visualization 1
+              </h2>
+            </div>
+
+            <!-- 第二排右 -->
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/video4.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Additional Visualization 2
+              </h2>
+            </div>
+
           </div>
         </div>
 
         <!-- Page 2 -->
         <div class="item">
-          <div class="box m-2" style="padding: 1.5rem;">
-            <div class="columns is-multiline is-variable is-4">
+          <div class="columns is-multiline is-centered">
 
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/instrument_cam_2.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Instrument CAM Visualization</strong>
-                  </p>
-                </div>
-              </div>
-
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/tissue_cam_2.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Tissue CAM Visualization</strong>
-                  </p>
-                </div>
-              </div>
-
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/video7.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Additional Visualization 3</strong>
-                  </p>
-                </div>
-              </div>
-
-              <div class="column is-6">
-                <div class="video-card">
-                  <video controls muted loop playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
-                    <source src="static/videos/video8.mp4" type="video/mp4">
-                  </video>
-                  <p class="is-size-6 mt-2 has-text-centered">
-                    <strong>Additional Visualization 4</strong>
-                  </p>
-                </div>
-              </div>
-
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/PV-instru2.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Instrument CAM Visualization
+              </h2>
             </div>
+
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/PV-tissue2.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Tissue CAM Visualization
+              </h2>
+            </div>
+
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/video7.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Additional Visualization 3
+              </h2>
+            </div>
+
+            <div class="column is-6">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="static/videos/video8.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Additional Visualization 4
+              </h2>
+            </div>
+
           </div>
         </div>
 
